@@ -1,0 +1,79 @@
+Nama : Galih Aji Prasetyo
+NIM : 231011402630
+Kelas : 04 TPLP 025
+Matkul : Data Mining
+
+1. Konsep dasar klasifikasi, teknik data mining yang bertujuan mengelompokkan data ke dalam kategori atau kelas tertentu berdasarkan atribut atribut yang dimilikinya..
+Digunakan pada banyak aplikasi seperti deteksi spam, diagnosis penyakit, atau prediksi kredit macet.
+Proses umum: Training Data ➜ Model ➜ Testing ➜ Prediksi
+
+2. Decision Tree, Merupakan model klasifikasi berbentuk pohon, terdiri dari:
+-Node keputusan: pertanyaan terhadap atribut
+-Cabang: hasil dari keputusan
+-Daun (leaf): hasil klasifikasi
+Algoritma populer: ID3, C4.5, CART
+Kelebihan: interpretatif dan visual
+Contoh: Apakah seseorang akan membeli produk? (berdasarkan usia, penghasilan, dll.)
+
+3. Naïve Bayes
+Pendekatan probabilistik berdasarkan Teorema Bayes
+Disebut “naïve” karena mengasumsikan setiap fitur bebas secara kondisional terhadap fitur lain.
+Cocok untuk: klasifikasi teks, filtering email, analisis sentimen
+Keunggulan: cepat, efisien untuk dataset besar, meskipun asumsi independensinya tidak realistis.
+
+4. Dasar-dasar Python untuk Data Science
+Library penting:
+pandas: manipulasi data
+numpy: operasi numerik
+matplotlib / seaborn: visualisasi
+scikit-learn: algoritma machine learning
+
+5. Decision Tree dengan Python
+Contoh langkah:
+Load dataset: from sklearn.datasets import load_iris
+Split data: train_test_split()
+Modeling: DecisionTreeClassifier()
+Train: .fit()
+Predict: .predict()
+Evaluasi: accuracy_score()
+
+contoh kode:
+
+from sklearn.tree import DecisionTreeClassifier
+clf = DecisionTreeClassifier()
+clf.fit(X_train, y_train)
+y_pred = clf.predict(X_test)
+
+6. Konsep Forecasting, Estimasi atau peramalan (forecasting) digunakan untuk memprediksi nilai numerik di masa depan, seperti suhu, harga saham, penjualan, dll.
+Berbeda dengan klasifikasi, forecasting lebih fokus pada regresi (nilai kontinu).
+
+-Support Vector Machine (SVM)
+Awalnya untuk klasifikasi, memisahkan data dengan hyperplane terbaik.
+Memaksimalkan margin antar kelas.
+
+-Support Vector Regression (SVR)
+Variasi dari SVM untuk regresi
+Tujuannya adalah menemukan garis prediksi (regression line) dengan error toleransi minimal (ε-insensitive loss)
+
+7. Jenis Data
+Data Kualitatif: Data yang bersifat deskriptif dan tidak dapat diukur secara numerik, seperti warna, jenis kelamin, atau status pernikahan.
+Data Kuantitatif: Data yang dapat diukur dan dinyatakan dalam angka, seperti tinggi badan, berat badan, atau jumlah pendapatan.
+
+Kualitas Data
+Kelengkapan (Completeness): Sejauh mana semua data yang diperlukan tersedia.
+Konsistensi (Consistency): Tingkat keseragaman data di seluruh dataset.
+Akurasi (Accuracy): Seberapa tepat data mencerminkan realitas.
+Keterkinian (Timeliness): Seberapa up-to-date data tersebut.
+
+Preprocessing Data adalah tahap awal dalam analisis data untuk memastikan data siap digunakan. Langkah-langkahnya meliputi:
+Pembersihan Data (Data Cleaning): Menghapus atau memperbaiki data yang hilang, duplikat, atau tidak konsisten.
+Integrasi Data (Data Integration): Menggabungkan data dari berbagai sumber menjadi satu dataset yang kohesif.
+Transformasi Data (Data Transformation): Mengubah data ke dalam format atau struktur yang sesuai untuk analisis.
+Reduksi Data (Data Reduction): Mengurangi volume data tanpa kehilangan informasi penting, misalnya melalui teknik seleksi fitur atau pengelompokan.
+
+Teknik Pengukuran Data
+Pengukuran data melibatkan penggunaan skala pengukuran:
+Skala Nominal: Kategorisasi tanpa urutan, seperti jenis kelamin atau warna.
+Skala Ordinal: Kategorisasi dengan urutan, seperti peringkat kepuasan pelanggan.
+Skala Interval: Pengukuran dengan jarak yang sama antar nilai, tanpa nol absolut, seperti suhu dalam Celsius.
+Skala Rasio: Seperti skala interval, tetapi dengan nol absolut, seperti berat atau tinggi badan.
